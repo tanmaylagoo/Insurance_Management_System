@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Policy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body 
+    {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #3c33ea, #838deb);
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    .container
+    {
+      background: #ffffff;
+      padding: 2.2rem 2rem;
+      border-radius: 12px;
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    }
+
+    h2 
+    {
+      font-size: 22px;
+      font-weight: 600;
+      color: #1e293b;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    form input
+    {
+      width: 100%;
+      padding: 10px 12px;
+      margin-bottom: 0.9rem;
+      border: 1px solid #d4d4d8;
+      border-radius: 8px;
+      font-family: 'Quicksand', sans-serif;
+      font-size: 14px;
+      outline: none;
+      transition: border 0.15s, box-shadow 0.15s;
+    }
+
+    form input:focus
+    {
+      border-color: #6366f1;
+      box-shadow: 0 0 0 3px rgba(99,102,241,0.15);
+    }
+
+    button
+    {
+      width: 100%;
+      padding: 11px;
+      margin-top: 0.5rem;
+      background: #6366f1;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-family: 'Quicksand', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.15s, transform 0.1s;
+    }
+
+    button:hover { background: #4f46e5; }
+    button:active { transform: scale(0.98); }
+
+    .link
+    {
+      display: block;
+      margin-top: 1.2rem;
+      text-align: center;
+      font-size: 13.5px;
+      color: #4f46e5;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .link:hover { text-decoration: underline; }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h2>Policy</h2>
+
+    <form action="../php/policy_insert.php" method="POST">
+      <label><b>Enter Policy Number</b></label>
+      <input name="pno" placeholder="Policy Number" required>
+      <label><b>Enter Customer ID</b></label>
+      <input name="cid" placeholder="Customer ID" required>
+      <label><b>Enter Provider ID</b></label>
+      <input name="pid" placeholder="Provider ID" required>
+      <label><b>Enter Govt Code</b></label>
+      <input name="gcode" placeholder="Gov Code (1/2/3)" required>
+      <label><b>Enter Amount </b></label>
+      <input name="amount" placeholder="Amount" required>
+      <button type="submit">Create</button>
+    </form>
+
+    <a class="link" href="../display/policy_display.php">View Policies</a>
+  </div>
+
+</body>
+</html>
