@@ -1,7 +1,75 @@
 <?php include '../db.php'; ?>
 
-<table border="1">
-<tr><th>Policy</th><th>Customer</th><th>Provider</th><th>Type</th><th>Amount</th></tr>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Policy Display</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f5f7fb;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: auto;
+            background: white;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background: #4f46e5;
+            color: white;
+        }
+
+        a {
+            text-decoration: none;
+            padding: 5px 8px;
+            border-radius: 5px;
+            color: black;
+            font-size: 12px;
+        }
+
+        .delete {
+            background: red;
+        }
+
+        .edit {
+            background: green;
+        }
+
+        .top-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Insurance Policies</h2>
+
+<table>
+<tr>
+    <th>Policy</th>
+    <th>Customer</th>
+    <th>Provider</th>
+    <th>Type</th>
+    <th>Amount</th>
+    <th>Actions</th>
+</tr>
 
 <?php
 $q="
@@ -21,8 +89,20 @@ echo "<tr>
 <td>{$row['provider_id']}</td>
 <td>{$row['description']}</td>
 <td>{$row['amount_requested']}</td>
-<td><a href='../php/policy_delete.php?id={$row['policy_number']}'>Delete</a></td>
+
+<td>
+<a class='delete' href='../php/policy_delete.php?id={$row['policy_number']}'>Delete</a>
+<a class='edit' href='../php/policy_edit.php?id={$row['policy_number']}'>Edit</a>
+</td>
+
 </tr>";
 }
 ?>
+
 </table>
+
+<a class="top-link" href="../policy.html">⬅ Back to Policy Form</a>
+<a class="top-link" href="../home.php">⬅ Back to Home</a>
+
+</body>
+</html>
