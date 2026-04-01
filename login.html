@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Log In</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body 
+    {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #90a4f2;
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    .card 
+    {
+      background: #314595;
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 14px;
+      padding: 2.5rem 2rem;
+      width: 100%;
+      max-width: 360px;
+    }
+
+    .card h2 { font-size: 22px; font-weight: 500; color: #fff; margin-bottom: 6px; }
+    .card > p { font-size: 13.5px; color: rgba(255,255,255,0.55); margin-bottom: 2rem; }
+
+    .field { margin-bottom: 1rem; }
+
+    .field label 
+    {
+      display: block;
+      font-size: 12.5px;
+      font-weight: 500;
+      color: #ffffff;
+      margin-bottom: 5px;
+    }
+
+    .field input 
+    {
+      width: 100%;
+      padding: 10px 12px;
+      border: none;
+      border-radius: 8px;
+      font-family: 'Quicksand', sans-serif;
+      font-size: 14px;
+      color: #111;
+      background: #fff;
+      outline: none;
+      transition: box-shadow 0.15s;
+    }
+
+    .field input:focus { box-shadow: 0 0 0 3px rgba(255,255,255,0.35); }
+    .field input::placeholder { color: #aaa; }
+
+    .btn 
+    {
+      width: 100%;
+      padding: 11px;
+      margin-top: 0.75rem;
+      background: #fff;
+      color: #4338ca;
+      border: none;
+      border-radius: 8px;
+      font-family: 'Quicksand', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.15s, transform 0.1s;
+    }
+
+    .btn:hover { background: #f0f0ff; }
+    .btn:active { transform: scale(0.98); }
+
+    .footer { text-align: center; font-size: 13px; color: rgba(255,255,255,0.5); margin-top: 1.5rem; }
+    .footer a { color: #fff; text-decoration: none; font-weight: 500; }
+    .footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <h2><b>Log In</b></h2><br>
+    <form action="signup.php" method="POST">
+
+      <div class="field">
+        <label for="username">Username</label>
+        <input id="username" name="username" placeholder="Enter your username" required autocomplete="username">
+      </div>
+
+      <div class="field">
+        <label for="password">Password</label>
+        <input id="password" type="password" name="password" placeholder="Enter your password" required autocomplete="new-password">
+      </div>
+
+      <button type="submit" class="btn"><b>Log In </b></button>
+    </form>
+
+    <p class="footer">Don't have an account? <a href="signup.html">Sign Up</a></p>
+  </div>
+</body>
+</html>
