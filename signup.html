@@ -4,6 +4,8 @@
   <title>Signup</title>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  <script src="validation.js"></script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -86,10 +88,10 @@
 <body>
   <div class="card">
     <h2><b>Create account!</b></h2><br>
-    <form action="./php/signup.php" method="POST">
+    <form action="./php/signup.php" method="POST" onsubmit="return validateSignupForm()">
 
       <div class="field">
-        <label for="username">Username</label>
+        <label for="username">User Email</label>
         <input id="username" name="username" placeholder="Enter your username" required autocomplete="username">
       </div>
 

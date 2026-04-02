@@ -3,6 +3,8 @@
 <head>
   <title>Policy</title>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <script src="validation.js"></script>
   
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -94,7 +96,7 @@
   <div class="container">
     <h2>Policy</h2>
 
-    <form action="php/policy_insert.php" method="POST">
+    <form action="php/policy_insert.php" method="POST" onsubmit="return validatePolicyForm()">
       <label><b>Enter Policy Number</b></label>
       <input name="pno" placeholder="Policy Number" required>
       <label><b>Enter Customer ID</b></label>

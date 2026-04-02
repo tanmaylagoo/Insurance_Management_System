@@ -12,6 +12,6 @@ VALUES ($pno, $cid, $pid, $gcode, CURRENT_DATE, $amount, 'Pending')";
 
 pg_query($conn, $query);
 
-echo "Policy Created Successfully<br>";
-echo "<a href='../html/policy.html'>Back</a>";
+echo "<b> <h1>Policy Created Successfully</h1></b><br>";
+echo "<a href='../policy.html'><h4><b>Back</b></h4></a>";
 ?>

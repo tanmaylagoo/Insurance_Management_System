@@ -1,9 +1,9 @@
 <?php
 $conn = pg_connect("host=localhost dbname=IMS user=postgres password=postgres");
 if(!$conn){
-    echo "Connection failed";
+    echo "Connection failed!!";
 }
 else{
-    echo "Connected to database successfully";
+    echo "<h1> <b>Connected to database successfully!!</b></h1> <br>";
 }
 ?>

@@ -101,8 +101,8 @@ echo "<tr>
 
 </table>
 
-<a class="top-link" href="../policy.html">⬅ Back to Policy Form</a>
-<a class="top-link" href="../home.php">⬅ Back to Home</a>
+<a class="top-link" href="../policy.html"><b><h3>⬅ Back to Policy Form</h3></b></a>
+<a class="top-link" href="../home.php"><b><h3>⬅ Back to Home</h3></b></a>
 
 </body>
 </html>
